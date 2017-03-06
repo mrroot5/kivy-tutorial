@@ -1,23 +1,35 @@
 # buttonsgrid.kv
 <ButtonsGrid>:
     cols: 3
-    rows: 3
+    rows: 5
     Button:
+        id: btn00
         text: '0,0'
-        on_press: clicked
     Button:
-        text: '0,1'
+        id:btnUp
+        text: 'Adelante'
+        on_press: root.forward(btnUp)
     Button:
+        id: btn02
         text: '0,2'
     Button:
-        text: '1,0'
+        id:btnLeft
+        text: 'Izquierda'
+        on_press: root.left(btnLeft)
     Button:
+        id: btn11
         text: '1,1'
     Button:
-        text: '1,2'
+        id:btnRight
+        text: 'Derecha'
+        on_press: root.right(btnRight)
     Button:
+        id: btn20
         text: '2,0'
     Button:
-        text: '2,1'
+        id:btnDown
+        text: 'Atrás'
+        on_press: root.back(btnDown)
     Button:
+        id: btn22
         text: '2,2'
