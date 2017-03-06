@@ -1,10 +1,16 @@
 # buttonsgrid.kv
+<VideoGrid>
+    cols: 1
+    rows: 1
+    Button:
+        text: 'Video'
 <ButtonsGrid>:
     cols: 3
     rows: 5
     Button:
         id: btn00
         text: '0,0'
+        disabled: True
     Button:
         id:btnUp
         text: 'Adelante'
@@ -12,6 +18,7 @@
     Button:
         id: btn02
         text: '0,2'
+        disabled: True
     Button:
         id:btnLeft
         text: 'Izquierda'
@@ -19,6 +26,7 @@
     Button:
         id: btn11
         text: '1,1'
+        disabled: True
     Button:
         id:btnRight
         text: 'Derecha'
@@ -26,6 +34,7 @@
     Button:
         id: btn20
         text: '2,0'
+        disabled: True
     Button:
         id:btnDown
         text: 'Atrás'
@@ -33,3 +42,13 @@
     Button:
         id: btn22
         text: '2,2'
+        disabled: True
+<Status>:
+    cols: 1
+    rows: 1
+
+
+<ContainerBox>:
+    orientation: 'horizontal'
+    VideoGrid:
+    ButtonsGrid
