@@ -1,0 +1,4 @@
+# Buildozer
+.buildozer/
+buildozer.spec
+bin/
