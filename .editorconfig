@@ -1,0 +1,28 @@
+# EditorConfig docs and installation: http://editorconfig.org/
+
+# top-most EditorConfig file
+root = true
+
+# For all files
+[*]
+# tab | space
+indent_style = space
+indent_size = 4
+# lf (Unix) | crlf (DOS) | cr (Mac)
+end_of_line = lf
+# latin1 | utf-8 | utf-16be | utf-16le
+charset = utf-8
+# Denotes whether whitespace is allowed at the end of lines
+trim_trailing_whitespace = true
+# Denotes whether file should end with a newline
+insert_final_newline = true
+
+# MORE EXAMPLES
+# Config for py files
+#[*.py]
+# Config for all JS under lib directory
+#[lib/**.js]
+# Matches multiple files with brace expansion notation
+#[*.{js,py}]
+# Matches the exact files either package.json or .travis.yml
+#[{package.json,.travis.yml}]
