@@ -10,7 +10,8 @@ from kivy.app import App
 import kivy.uix.gridlayout as gridl
 
 class ButtonsGrid(gridl.GridLayout):
-    pass
+    def clicked(self, btn):
+        print(btn.text)
 
 class ButtonsGridApp(App):
     def build(self):
