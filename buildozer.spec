@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = Kivy Android Hello World
+title = Kivy Hello World
 
 # (str) Package name
-package.name = kivyandroidhello
+package.name = myapp
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
@@ -75,14 +75,13 @@ fullscreen = 1
 #android.permissions = INTERNET
 
 # (int) Android API to use
-#android.api = 19 # Android 4.4
-android.api = 22 # Android 5.1
+#android.api = 19
 
 # (int) Minimum API required
-android.minapi = 19
+#android.minapi = 9
 
 # (int) Android SDK version to use
-android.sdk = 22
+#android.sdk = 20
 
 # (str) Android NDK version to use
 #android.ndk = 9c
@@ -102,13 +101,22 @@ android.sdk = 22
 # (str) python-for-android git clone directory (if empty, it will be automatically cloned from github)
 #android.p4a_dir =
 
+# (str) The directory in which python-for-android should look for your own build recipes (if any)
+#p4a.local_recipes =
+
+# (str) Filename to the hook for p4a
+#p4a.hook =
+
 # (list) python-for-android whitelist
 #android.p4a_whitelist =
 
 # (bool) If True, then skip trying to update the Android sdk
 # This can be useful to avoid excess Internet downloads or save time
 # when an update is due and you just want to test/build your package
-android.skip_update = True
+# android.skip_update = False
+
+# (str) Bootstrap to use for android builds (android_new only)
+# android.bootstrap = sdl2
 
 # (str) Android entry point, default is ok for Kivy-based app
 #android.entrypoint = org.renpy.android.PythonActivity
@@ -159,6 +167,9 @@ android.skip_update = True
 
 # (bool) Copy library instead of making a libpymodules.so
 #android.copy_libs = 1
+
+# (str) The Android arch to build for, choices: armeabi-v7a, arm64-v8a, x86
+android.arch = armeabi-v7a
 
 #
 # iOS specific

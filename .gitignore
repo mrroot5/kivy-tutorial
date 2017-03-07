@@ -1,6 +1,11 @@
 # Buildozer
+#
+## Buildozer folders
 .buildozer/
-buildozer.spec
 bin/
+#
+## Buildozer files
+.buildozer/state.db
+#
 # Python
 __pychache__/
