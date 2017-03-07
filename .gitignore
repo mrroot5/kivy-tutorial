@@ -1,0 +1,6 @@
+# Buildozer
+.buildozer/
+buildozer.spec
+bin/
+# Python
+__pychache__/
