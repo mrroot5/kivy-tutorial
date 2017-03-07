@@ -3,7 +3,7 @@
 from requests import get
 # Kivy imports
 import kivy
-kivy.require('1.9.1') # replace with your current kivy version !
+kivy.require('1.9.1')
 # Kivy modules
 from kivy.app import App
 from kivy.uix.scrollview import ScrollView
@@ -24,7 +24,7 @@ class ButtonsGrid(gridl.GridLayout):
     def forward(self, btn):
         status_bar = self.parent.children[0].ids.status_text
         self.parent.change_status(status_bar, btn.text)
-        self.parent.change_status(status_bar, self.do_request())
+        # self.parent.change_status(status_bar, self.do_request())
 
     def right(self, btn):
         status_bar = self.parent.children[0].ids.status_text
