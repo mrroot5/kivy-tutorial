@@ -1,71 +1,31 @@
 # buttonsgrid.kv
-<VideoGrid>
-    cols: 1
-    rows: 1
-    size_hint: [1, 1.5]
-    Video:
-        source: 'https://www.w3schools.com/html/mov_bbb.mp4'
-        state: "play"
-        volumen: 1
-        on_loaded: root.change_status(self.parent.children[0].ids.status_text, 'Playing')
 <ButtonsGrid>:
     cols: 3
     rows: 3
     Button:
         id: btn00
         text: '0,0'
-        disabled: True
     Button:
-        id: btn_up
-        text: 'Adelante'
-        # Always turn markup on
-        # markup: True
-        # text: "%s"%(icon('icon-comment'))
-        on_press: root.forward(btn_up)
+        id: btn00
+        text: '0,1'
     Button:
         id: btn02
         text: '0,2'
-        disabled: True
     Button:
-        id:btn_left
-        text: 'Izquierda'
-        on_press: root.left(btn_left)
+        id: btn10
+        text: '1,0'
     Button:
         id: btn11
         text: '1,1'
-        disabled: True
     Button:
-        id:btn_right
-        text: 'Derecha'
-        on_press: root.right(btn_right)
+        id: btn12
+        text: '1,2'
     Button:
         id: btn20
         text: '2,0'
-        disabled: True
     Button:
-        id:btn_down
-        text: 'Atrás'
-        on_press: root.back(btn_down)
+        id: btn21
+        text: '2,1'
     Button:
         id: btn22
         text: '2,2'
-        disabled: True
-<StatusBar>:
-    size_hint: [1, 0.2]
-    TextInput:
-        id: status_text
-        # Disable text height. Now we see a scroll
-        size_hint: 1, None
-        text: 'Aquí aparecerá el estado de las peticiones'
-        # DEPRECATED
-        # height: max( (len(self._lines)+1) * self.line_height, status_text.height)
-        auto_indent: True
-        readonly: True
-        disabled: True
-        disabled_color: [1,1,1,1]
-
-<ContainerBox>:
-    orientation: 'vertical'
-    VideoGrid:
-    ButtonsGrid:
-    StatusBar:
