@@ -3,8 +3,11 @@
     cols: 1
     rows: 1
     size_hint: [1, 1.5]
-    Button:
-        text: 'Video'
+    Video:
+        source: 'https://www.w3schools.com/html/mov_bbb.mp4'
+        state: "play"
+        volumen: 1
+        on_loaded: root.change_status(self.parent.children[0].ids.status_text, 'Playing')
 <ButtonsGrid>:
     cols: 3
     rows: 3
